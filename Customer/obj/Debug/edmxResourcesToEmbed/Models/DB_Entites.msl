@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OnlineStoreModelStoreContainer" CdmEntityContainer="OnlineStoreEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="OnlineStoreModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="customerId" ColumnName="customerId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="contactNo" ColumnName="contactNo" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemCategories">
+      <EntityTypeMapping TypeName="OnlineStoreModel.ItemCategory">
+        <MappingFragment StoreEntitySet="ItemCategory">
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="OnlineStoreModel.Item">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+          <ScalarProperty Name="itemQty" ColumnName="itemQty" />
+          <ScalarProperty Name="item_Image" ColumnName="item_Image" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="OnlineStoreModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="customerId" ColumnName="customerId" />
+          <ScalarProperty Name="paymentId" ColumnName="paymentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="OnlineStoreModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="detailId" ColumnName="detailId" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="OnlineStoreModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="paymentId" ColumnName="paymentId" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="OnlineStoreModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="userRoleCode" ColumnName="userRoleCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="OnlineStoreModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="userRoleCode" ColumnName="userRoleCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
