@@ -13,10 +13,10 @@ namespace Customer.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OnlineStoreEntities : DbContext
+    public partial class DB_Entities : DbContext
     {
-        public OnlineStoreEntities()
-            : base("name=OnlineStoreEntities")
+        public DB_Entities()
+            : base("name=DB_Entities")
         {
         }
     

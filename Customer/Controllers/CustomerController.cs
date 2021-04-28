@@ -14,7 +14,7 @@ namespace Customer.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CustomerController : ApiController
     {
-        OnlineStoreEntities onlineStoreEntities = new OnlineStoreEntities();
+        DB_Entities _dbEntities = new DB_Entities();
          
         [HttpGet]
         [Route("all")]
@@ -24,8 +24,8 @@ namespace Customer.Controllers
             ItemCategory item = new ItemCategory();
             item.categoryId = id;
             item.name = "name";
-            onlineStoreEntities.ItemCategories.Add(item);
-            onlineStoreEntities.SaveChanges();
+            _dbEntities.ItemCategories.Add(item);
+            _dbEntities.SaveChanges();
             return new string[] { "value1", "value2" };
         }
     }
